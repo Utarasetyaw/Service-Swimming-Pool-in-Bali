@@ -1,0 +1,52 @@
+{
+  "blog": [
+    {
+      "title": "Kolam Renang di Bali",
+      "date": "14 November 2021",
+      "text": "Kolam Renang di Bali akan selalu ada dan berlipat ganda",
+      "id": 1
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "product_name": "Chlorine Granular",
+      "country": "RRC",
+      "type": "Granul",
+      "package": "Kg/Pail",
+      "img": "img/product-1.jpg"
+    },
+    {
+      "id": "2",
+      "product_name": "Chlorine Tablet",
+      "country": "RRC",
+      "type": "Kg/Pail",
+      "package": "Tablet",
+      "img": "img/product-2.jpg"
+    },
+    {
+      "id": "3",
+      "product_name": "Liquid HCL",
+      "country": "Chiwi Chemical",
+      "type": "Liquid",
+      "package": "Jerry Can",
+      "img": "img/product-3.jpg"
+    },
+    {
+      "id": "4",
+      "product_name": "Tawas",
+      "country": "Japan",
+      "type": "Crystal",
+      "package": "Kg",
+      "img": "img/product-4.jpg"
+    },
+    {
+      "id": "5",
+      "product_name": "Sodium Hypo",
+      "country": "Chiwi Chemical",
+      "type": "Liquid",
+      "package": "Jerry Can",
+      "img": "img/product-5.jpg"
+    }
+  ]
+}

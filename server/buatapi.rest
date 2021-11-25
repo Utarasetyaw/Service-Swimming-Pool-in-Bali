@@ -1,0 +1,28 @@
+GET http://localhost:5000/product
+
+###
+POST http://localhost:5000/blog
+
+Content-Type: "application/json"
+
+{
+    "foto": "yey update",
+    "keterangan": "jsdhshd"
+}
+
+###
+GET http://localhost:5000/Product/2
+
+###
+PATCH http://localhost:5000/Product/2
+Content-Type: application/json
+
+{
+    "id": "1",
+    "foto": "yey update",
+    "keterangan": "jsdhshd" 
+}
+
+###
+Delete http://localhost:5000/Product/6
+    
