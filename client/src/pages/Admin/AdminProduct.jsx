@@ -1,41 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { product } from "../../utils/sjt_product";
-import { FaSearch } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
 import ProductCard from "../../components/PaperCardProduct";
 import { useHistory } from "react-router-dom";
 
+
 const Product = () => {
   
-  const [search, setSearch] = useState("");
   const [dataProduct, setDataProduct] = useState([])
   const [judul, setJudul] = useState("");
   const [keterangan, setKeterangan] = useState("");
   const [foto, setfoto] = useState("");
   const [isCreate, setIsCreate] = useState(false);
   const history = useHistory();
-
-
-  // const filtered = product.filter((item) => {
-  //   return item.product_name.toLowerCase().includes(search.toLowerCase());
-  // });
-
+   
   useEffect(async () => {
     const response = await fetch("http://localhost:5000/product")
     const data = await response.json()
     setDataProduct(data)  
   }, [])
+  
   const handleSubmit = (e) => {
     console.log("asdsadasd")
     e.preventDefault();
     console.log("sfasdfd")
-  if (judul !== "" && keterangan !== "") {
+  if (judul !== "" && keterangan !== "" && foto !== "") {
       fetch("http://localhost:5000/product", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ judul, keterangan}),
+        body: JSON.stringify({ judul, keterangan, foto}),
       })
         .then((res) => res.json())
         .then((res) => {
@@ -79,6 +72,15 @@ const Product = () => {
       />
     </label>
     <label className="block text-gray-700 text-sm font-bold mb-2">
+      <span>foto :</span>
+      <input
+        type="text"
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        value={foto}
+        onChange={(e) => setfoto(e.target.value)}
+      />
+    </label>
+    <label className="block text-gray-700 text-sm font-bold mb-2">
       <span>Keterangan :</span>
       <textarea
         name=""
@@ -96,7 +98,7 @@ const Product = () => {
   </form>: 
   <div>
     <div className="flex justify-center items-center">
-  <button className="mt-10 mb-10 bg-blue-500 hover:bg-blue-100 text-white w-1 font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline" 
+  <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline" 
   onClick={() => setIsCreate(true)}>create</button>  
   </div>
   </div>}

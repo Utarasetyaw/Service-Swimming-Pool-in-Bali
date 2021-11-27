@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { product } from "../utils/sjt_product";
 import { FaSearch } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import ProductCard from "../components/ProductCard";
@@ -7,12 +6,6 @@ import ProductCard from "../components/ProductCard";
 
 const Product = () => {
   const [produuct, setProduct] = useState([]);
-  const [search, setSearch] = useState("");
-
-  const filtered = product.filter((item) => {
-    return item.product_name.toLowerCase().includes(search.toLowerCase());
-  });
-
   const urlBase = "http://localhost:5000/product";
 
   useEffect(() => {
@@ -29,7 +22,7 @@ const Product = () => {
     <div className=" bg-gray-50">
       <section id="details">
         <div className="font-roboto text-center text-green-600 text-3xl mb-5 py-5 uppercase">
-          Welcome to Poolshop SuryaJayaTeknik
+          Welcome to Poolshop Service Bali
         </div>
         <p className="text-justify px-10 p-3">
           Thank you for visiting Surya Jaya Teknik. We have been satisying
@@ -44,20 +37,7 @@ const Product = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between px-10 py-10 ">
-          <div className="rounded-full shadow-md flex justify-between items-center ">
-            <input
-              className=" py-4 px-6 focus:outline-none"
-              type="text"
-              id="search"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search ..."
-            />
-            <button>
-              <FaSearch className=" w-8 h-8 p-2 mr-4 bg-blue-400 fill-current text-white rounded-full" />
-            </button>
-          </div>
-          <button className="bg-green-500 text-white shadow-md rounded flex justify-center items-center p-1 mt-4">
+          <button className="ml-20 bg-green-500 text-white shadow-md rounded flex justify-center items-center p-2 mt-4">
             <a target="" href="https://wa.me/628123618911?text=Order:">
               ORDER NOW !{" "}
             </a>

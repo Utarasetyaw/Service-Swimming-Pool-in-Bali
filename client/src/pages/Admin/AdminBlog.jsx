@@ -77,7 +77,7 @@ const AdminBlog = () => {
   </form>: 
   <div>
     <div className="flex justify-center items-center">
-  <button className="mt-10 mb-10 bg-blue-500 hover:bg-blue-100 text-white w-1 font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline" 
+  <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline" 
   onClick={() => setIsCreate(true)}>create</button>  
   </div>
    {blogs &&

@@ -3,24 +3,23 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const Edit = (props) => {
-  const { title, text, date, id } = props.location.state;
+  const { title, text, id } = props.location.state;
   const [newTitle, setNewTitle] = useState(title);
-  const [newDate, setNewDate] = useState(date);
   const [newText, setNewText] = useState(text);
   const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(newDate, newText, newTitle);
+    console.log(newText, newTitle);
 
-    if (newTitle !== "" && newDate !== "" && newText !== "") {
-      console.log(newTitle, newText, newDate, id);
+    if (newTitle !== "" &&newText !== "") {
+      console.log(newTitle, newText, id);
       fetch("http://localhost:5000/blog/" + id, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ judul: newTitle, date: newDate, keterangan: newText }),
+        body: JSON.stringify({ judul: newTitle, keterangan: newText }),
       })
         .then((res) => res.json())
         .then((res) => {

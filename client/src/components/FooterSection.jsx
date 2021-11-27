@@ -30,9 +30,6 @@ const FooterSection = () => {
               </p>
             </div>
           </div>
-          <div className="w-full h-10 text-center py-2">
-            <a href="https://ncit.id.com/"> &copy; NCIT</a>
-          </div>
         </div>
       </section>
     </div>

@@ -1,7 +1,5 @@
 import React from "react";
-import swimmminghero from "../img/kolam.jpg";
-import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+import swimmminghero from "../img/bg3.png";
 
 const HeroSection = () => {
   return (

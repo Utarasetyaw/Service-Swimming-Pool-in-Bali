@@ -29,7 +29,7 @@ const Navbar = () => {
                 className="hover:text-gray-600 transition ease-out duration-300 tracking-wider transform hover:scale-125 text-xs sm:text-base"
                 href="/"
               >
-                POOLSHOP SURYAJAYATEKNIK
+                POOLSHOP SERVICES BALI
               </a>
             </li>
           </ul>

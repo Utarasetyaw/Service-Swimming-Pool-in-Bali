@@ -4,8 +4,7 @@ import bodyParser from "body-parser";
 import db from "./config/database.js";
 import productRoutes from "./router/product.js"
 import blogRoutes from "./router/blog.js"
-import clientRoutes from "./router/client.js"
-import serviceRoutes from "./router/service.js"
+
 
 const app = express();
 
@@ -32,8 +31,5 @@ try {
 
 app.use('/Product',productRoutes)
 app.use('/blog',blogRoutes)
-app.use('/client',clientRoutes)
-app.use('/service',serviceRoutes)
-
 
 app.listen(5000, () => console.log("server conect"))
